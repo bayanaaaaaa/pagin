@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,600;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bitter', sans-serif;
+    font-weight: 700;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #d84c6e;
+}
+
+.container{
+    width: 70vw;
+    height: 90vh;
+}
+
+.title{
+    font-size: 3rem;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    justify-content: space-between;
+    grid-gap: 50px 0;
+}
+
+.card{
+    width: 280px;
+    height: 280px;
+    padding: 15px;
+    position: relative;
+    background: #ffffff;
+    position: relative;
+    transform: translate(20px, 20px);
+}
+
+.card:before{
+    content: '';
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    border: 2px dashed #ffffff;
+    z-index: -1;
+    left: -20px;
+    top: -20px;
+    background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 5px);
+}
+
+
+.card__quote{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.card__sweet{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a1a1a;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.card__date{
+    font-size: 16px;
+    font-weight: 400;
+    color: #1a1a1a;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.btn-list{
+    margin: 100px 0 500px 0;
+}
+
+.btn{
+    margin: 20px;
+}
+.card__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    z-index: -1;
+    transform: rotate(15deg);
+    opacity: .5;
+    transition: .2s;
+    
+}
+.card:hover .card__image{
+    transform: rotate(15deg) scale(1.2);
+}
+.cart__image img{
+width: 100%;
+}
